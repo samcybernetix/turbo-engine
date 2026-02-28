@@ -1,0 +1,27 @@
+turbo-engine/
+│── index.html
+│── 404.html
+│
+├── assets/
+│   ├── css/
+│   │   ├── ui.system.css
+│   │   ├── ui.theme.css
+│   │   └── ui.animations.css
+│   │
+│   └── js/
+│       ├── app.boot.js
+│       ├── app.router.js
+│       └── app.state.js
+│
+├── engine/
+│   └── turbo.core.js
+│
+├── ui/
+│   ├── ui.components.js
+│   ├── ui.interactions.js
+│   └── ui.theme.js
+│
+└── views/
+    ├── home.view.html
+    ├── dashboard.view.html
+    └── 404.view.html
