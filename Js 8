@@ -1,0 +1,25 @@
+document.addEventListener("mouseover", e=>{
+
+  if(e.target.classList.contains("glass")){
+
+    e.target.addEventListener("mousemove", ev=>{
+
+      const rect = e.target.getBoundingClientRect()
+      const x = ev.clientX - rect.left
+      const y = ev.clientY - rect.top
+
+      e.target.style.transform =
+      `rotateX(${(y-rect.height/2)/20}deg)
+       rotateY(${-(x-rect.width/2)/20}deg)
+       scale(1.03)`
+    })
+
+  }
+
+})
+
+document.addEventListener("mouseout", e=>{
+  if(e.target.classList.contains("glass")){
+    e.target.style.transform="rotateX(0) rotateY(0) scale(1)"
+  }
+})
