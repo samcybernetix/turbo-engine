@@ -1,0 +1,37 @@
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:linear-gradient(120deg,#00f0ff33,#ff00ff33,#00ff8833);
+  filter:blur(120px);
+  animation:aurora 18s linear infinite;
+  z-index:-1;
+}
+
+@keyframes aurora{
+  0%{transform:translateX(-30%)}
+  50%{transform:translateX(30%)}
+  100%{transform:translateX(-30%)}
+}
+
+#loader{
+  position:fixed;
+  inset:0;
+  background:black;
+  display:grid;
+  place-items:center;
+  z-index:9999;
+}
+
+.ring{
+  width:80px;
+  height:80px;
+  border:3px solid transparent;
+  border-top:3px solid #00f0ff;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  to{transform:rotate(360deg)}
+}
