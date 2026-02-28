@@ -1,0 +1,17 @@
+export const Turbo = {
+
+  async render(path){
+
+    const app = document.querySelector("#app")
+    app.style.opacity = 0
+
+    const html = await fetch(path).then(r => r.text())
+
+    setTimeout(()=>{
+      app.innerHTML = html
+      app.style.opacity = 1
+      document.getElementById("loader").style.display="none"
+    },300)
+  }
+
+}
